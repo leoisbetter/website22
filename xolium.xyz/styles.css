@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+body {
+    background-color: black;
+}
+
+#hero img {
+    height: 100vh;
+    width: 100%;
+    background-position: absolute;
+    z-index: 10;
+    object-fit: cover;
+}
+
+#hero .content {
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    left: 5%;
+    top: 3%;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgb(0, 0, 0);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 20px #2b78c2;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#clickme {
+    color: #d9ddde;
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    left: 5%;
+    top: 3%;
+    text-indent: 12em;
+    font-size: 18px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+#center {
+    font-family: 'Tilt Warp', sans-serif;
+}
+
+#button-text {
+    font-family: 'Tilt Warp', sans-serif;
+}
+
+#block {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+body {
+    background: rgb(17, 17, 17);
+}
+
+.back {
+    width: 100%;
+}
+
+#overlay-toggle {
+    position: absolute;
+    display: none;
+}
+
+.overlay {
+    z-index: 1;
+    background-color: black;
+}
+
+.overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.no-hover {
+    display: block;
+}
+
+.hover {
+    display: none;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.bg-video {
+    z-index: -1;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #000 !important;
+    color: #fff !important
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important
+}
+
+a:hover {
+    transition: .4s !important;
+    color: #fff !important
+}
+
+#center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#overlay-toggle:checked~.overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, 600ms;
+    animation-duration: 600ms, 1ms;
+}
+
+#overlay-toggle:checked~.overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms;
+}
+
+@media(hover: hover) {
+    .hover {
+        display: block;
+    }
+    .no-hover {
+        display: none;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
+
+#backgroundVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
